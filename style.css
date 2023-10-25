@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4070f4;
+}
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+.container .form{
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: #4070f4;
+}
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+.form a.text{
+    color: #4070f4;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button input:hover{
+    background-color: #265df2;
+}
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+    // js code to appear signup and login form
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+
+If you face any difficulties while creating your Login and Registration Form or your code is not working as expected, you can download the source code files for this Login and Registration Page for free by clicking on the download button, and you can also view a live demo of this card slider by clicking on the view live button.
+View Live Demo
+
+ 
+
+    TAGS
+    Animated Login & Registration Form
+    css form
+    Form Design
+    free login form template
+    free registration form template
+    HTML and CSS
+    HTML CSS JavaScript
+    HTML Form
+    login & signup form with source code
+
+Share
+Facebook
+WhatsApp
+Twitter
+Copy URL
+Previous article
+Create A Custom Select Menu in HTML CSS & JavaScript
+Next article
+Animated Hamburger Menu in HTML CSS JavaScript
+RELATED ARTICLESMORE FROM AUTHOR
+How to Create Responsive Fiverr Website in HTML CSS and JavaScript
+How to Create Responsive Fiverr Website in HTML and CSS
+Create A Responsive Coffee Website in HTML and CSS
+Create A Responsive Coffee Website in HTML and CSS
+Create Beautiful Responsive Cards in HTML and CSS
+How to Create Responsive Cards in HTML and CSS
+Recent Posts
+How to Create Responsive Fiverr Website in HTML CSS and JavaScript
+How to Create Responsive Fiverr Website in HTML and CSS
+October 11, 2023
+Create A Responsive Coffee Website in HTML and CSS
+Create A Responsive Coffee Website in HTML and CSS
+October 1, 2023
+Build An AI Image Generator Website in HTML CSS and JavaScript
+Build An AI Image Generator Website in HTML CSS and JavaScript
+September 26, 2023
+Create Beautiful Responsive Cards in HTML and CSS
+How to Create Responsive Cards in HTML and CSS
+September 23, 2023
+Create A Responsive Footer in HTML and CSS Only
+Create A Responsive Footer Section in HTML and CSS
+September 16, 2023
+Featured Post
+Build An Image Editor in HTML CSS & JavaScript
+Build An Image Editor in HTML CSS & JavaScript
+CodingNepal - July 15, 2022 11
+Categories
+
+    HTML and CSS225
+    Javascript168
+    JavaScript Projects97
+    Login Form51
+    Card Design43
+    Navigation Bar35
+    Website Designs25
+    Image Slider21
+    CSS Buttons20
+    Sidebar Menu17
+    JavaScript Games16
+    API Projects15
+    Preloader or Loader15
+    Form Validation14
+    PHP12
+
+CodingNepal
+ABOUT US
+CodingNepal is a blog dedicated to providing valuable and informative content about web development technologies such as HTML, CSS, JavaScript, and PHP... Read more
+FOLLOW US
+
+    About us Terms & Conditions Privacy policy Contact us 
+
+Copyright © 2023 CodingNepal All Rights Reserved
+
+AdBlock Detected
